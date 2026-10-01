@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>隐私政策（转盘挑人 / Turntable Picker）</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+      line-height: 1.75;
+      color: #1f2328;
+      background: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e6e6; background: #121212; }
+      table td, table th { border-color: #3a3a3a; }
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    h2 { font-size: 1.15rem; margin-top: 32px; border-left: 4px solid #b91c1c; padding-left: 10px; }
+    .meta { color: #6a737d; font-size: 0.9rem; margin-bottom: 24px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { border: 1px solid #d0d7de; padding: 8px 10px; text-align: left; font-size: 0.92rem; }
+    th { background: rgba(127,127,127,0.08); }
+    code { background: rgba(127,127,127,0.12); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+    .note { background: rgba(185,28,28,0.08); border-left: 4px solid #b91c1c; padding: 10px 14px; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <h1>隐私政策（转盘挑人 / Turntable Picker）</h1>
+  <div class="meta">生效日期：2026-10-01 · 开发者：Qingxu4935</div>
+
+  <h2>一句话</h2>
+  <p>转盘挑人<strong>完全离线</strong>运行：<strong>不收集</strong>、不上传、不共享任何个人信息，也没有账号、广告或遥测。</p>
+
+  <h2>我们收集什么</h2>
+  <p>什么都不收集。应用不包含网络功能，不声明 <code>internetClient</code> 或任何其他联网能力，因此从设计上就无法把你的数据发出去。具体来说：</p>
+  <ul>
+    <li>没有账号系统，不需要注册或登录。</li>
+    <li>没有遥测、埋点或崩溃上报。</li>
+    <li>没有广告，也没有第三方分析 SDK。</li>
+    <li>不读取通讯录、位置、相机、麦克风等任何敏感权限；应用只声明 <code>runFullTrust</code>（Win32 桌面应用打包的必需项，与联网无关）。</li>
+  </ul>
+
+  <h2>你的数据存在哪里</h2>
+  <p>你输入的名单、权重、分组、历史记录与界面设置，全部保存在<strong>本机</strong>：</p>
+  <p><code>%LOCALAPPDATA%\Qingxu4935.Turntable\turntable.json</code></p>
+  <p>MSIX 版（Microsoft Store）安装时，这个文件位于应用的包容器目录下。你可以随时在应用里删除条目，或直接删除该文件清除全部数据。因为文件只在本机，卸载应用时随包容器数据一并清除。</p>
+  <p>你主动导出的文件（CSV 历史、分组结果）由你决定存在哪里、发给谁——那一步由 Windows 的“另存为”对话框完成，应用不会替你上传。</p>
+
+  <h2>儿童与教学场景</h2>
+  <p>应用不含面向儿童的内容、不含广告、不收集任何数据，可以放心用在课堂上。学生名单属于你（教师或组织者）自己录入并保管的数据，应用不会把它传给任何人。</p>
+
+  <h2>权限说明（MSIX 清单）</h2>
+  <table>
+    <thead>
+      <tr><th>能力</th><th>用途</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>runFullTrust</code></td>
+        <td>桌面（Win32）应用打包为 MSIX 所必需；提供对本机文件系统的正常访问，用于读写上面那个本机状态文件与用户主动导出/导入的文件</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>变更</h2>
+  <p>若未来版本新增联网功能（例如云同步），本政策会先更新并说明收集范围，再发布该版本。</p>
+
+  <h2>联系我们</h2>
+  <p>疑问或建议请邮件至：<strong>qingxu4935@163.com</strong></p>
+</body>
+</html>
